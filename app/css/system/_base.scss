@@ -1,0 +1,190 @@
+* {
+  box-sizing: border-box;
+  outline: none !important;
+}
+
+sup, sub {
+  font-size: 70%;
+}
+
+.owl-nav.disabled {
+  display: none;
+}
+
+h3 {
+  font-size: 32px;
+  line-height: 130%;
+  color: #333333;
+  font-style: normal;
+  @media (max-width: $md) {
+    font-size: 26px;
+  }
+  @media (max-width: $mob) {
+    font-size: 20px;
+  }
+}
+
+.ruble {
+  font-family: Ruble;
+}
+
+.sm-hidden {
+  display: block;
+  @media (max-width: $sm) {
+    display: none;
+  }
+}
+
+.sm-show {
+  display: none;
+  @media (max-width: $sm) {
+    display: block;
+  }
+}
+
+.posr {
+  position: relative;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+body, html {
+  font-family: $ff_main;
+  font-size: 14px;
+  line-height: 22px;
+  min-height: 100%;
+  background-color: #FFFFFF;
+}
+
+.message-error {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: calc(100% + 4px);
+  left: 22px;
+  font-size: 11px;
+  line-height: 140%;
+  color: $error-border;
+}
+
+.lozad[data-loaded="true"], [data-loaded="true"] .lozad {
+  animation-name: showLazyImg;
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+}
+
+@keyframes showLazyImg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  width: 100%;
+  max-width: 1600px;
+  @media (max-width: $sm) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+
+p, figure {
+  margin: 0;
+}
+
+h2 {
+  font-family: $ff_title;
+  font-size: 46px;
+  line-height: 110%;
+  color: #333333;
+  margin: 0;
+  font-weight: normal;
+  text-align: center;
+  @media (max-width: $md) {
+    font-size: 38px;
+  }
+  @media (max-width: $mob) {
+    font-size: 24px;
+  }
+}
+
+.ovh {
+  overflow: hidden;
+}
+
+.order {
+ order: 1;
+}
+
+.layout {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+  &__content {
+    flex-grow: 2;
+    position: relative;
+    min-height: 100vh;
+  }
+
+  &__footer {
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+.m-hidden {
+  @media (max-width: $mob) {
+    display: none !important;
+  }
+}
+
+.sm-hidden {
+  @media (max-width: $sm) {
+    display: none !important;
+  }
+}
+
+.m-show {
+  display: none !important;
+  @media (max-width: $mob) {
+    display: block !important;
+  }
+}
+
+
+
+

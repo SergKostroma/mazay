@@ -1,0 +1,301 @@
+.residence {
+  background-color: rgba(190, 172, 131, 0.2);
+  padding-top: 72px;
+  @media (max-width: $sm) {
+    padding-top: 35px;
+  }
+
+  &__top-svg {
+    margin-bottom: -2px;
+    text-align: center;
+
+    svg {
+      width: 54px;
+      height: 47px;
+      fill: $main;
+    }
+
+    @media (max-width: $sm) {
+      svg {
+        width: 45px;
+      }
+      margin: 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 21px;
+    @media (max-width: $sm) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__desc {
+    font-size: 19px;
+    line-height: 160%;
+    color: $dark;
+    margin: 0 auto 42px;
+    max-width: 766px;
+    text-align: center;
+    @media (max-width: $md) {
+      font-size: 17px;
+    }
+    @media (max-width: $sm) {
+      max-width: 90%;
+      font-size: 14px;
+      margin: 0 auto 30px;
+    }
+  }
+
+  &__items {
+    max-width: 1246px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto 75px;
+    @media (max-width: $sm) {
+      margin: 0 auto 50px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    width: calc(50% - 12px);
+    border-radius: 50px 50px 0 0;
+    padding-bottom: 36.357%;
+    margin-bottom: 26px;
+    color: $white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @media (min-width: $hovers) {
+      &:hover {
+        .residence {
+          &__bottom {
+            background: linear-gradient(264.21deg, #D8BB78 9.16%, #BEAC83 54.61%);
+          }
+        }
+      }
+    }
+
+    &--text {
+      padding: 97px 22px 84px 22px;
+      background-image: url("/app/img/svg/residence.svg");
+      border-radius: unset !important;
+      @media (max-width: $sm) {
+        min-height: 300px;
+        order: 1;
+        background-image: url("/app/img/svg/residence-mobile.svg");
+        padding: 30px 17px 30px 14px !important;
+      }
+    }
+
+    @media (max-width: $sm) {
+      border-radius: 30px 30px 0 0;
+      min-width: 100%;
+      padding-bottom: 74%;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(190, 172, 131, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 0 10px 0 0;
+    padding: 6px 18px 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    transition: .5s;
+    @media (max-width: $sm) {
+      padding: 6px 10px 6px 14px;
+    }
+  }
+
+  &__item-title {
+    font-family: $ff_title;
+    font-size: 32px;
+    line-height: 130%;
+    @media (max-width: $md) {
+      font-size: 26px;
+    }
+    @media (max-width: $sm) {
+      font-size: 18px;
+      line-height: 110%;
+      margin-bottom: 4px;
+    }
+  }
+
+  &__item-desc, &__houses, &__humans {
+    font-size: 16px;
+    line-height: 160%;
+    @media (max-width: $md) {
+      font-size: 14px;
+    }
+    @media (max-width: $sm) {
+      font-size: 11px;
+      line-height: 140%;
+    }
+  }
+
+  &__item-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__houses, &__humans {
+    position: relative;
+    white-space: nowrap;
+
+    &:before {
+      content: '';
+      position: absolute;
+      transform: translateY(-50%);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__houses {
+    &:before {
+      top: 50%;
+      left: -45px;
+      width: 32px;
+      height: 27px;
+      background-image: url("/app/img/svg/house.svg");
+      @media (max-width: $sm) {
+        width: 26px;
+        height: 22px;
+        left: -30px;
+        top: 48%;
+      }
+    }
+  }
+
+  &__humans {
+    margin-left: 62px;
+    @media (max-width: $sm) {
+      margin-left: 39px;
+    }
+
+    &:before {
+      top: 40%;
+      left: -30px;
+      width: 17px;
+      height: 21px;
+      background-image: url("/app/img/svg/human.svg");
+      @media (max-width: $sm) {
+        width: 14px;
+        height: 17px;
+        left: -24px;
+      }
+    }
+  }
+
+  &__full-title {
+    font-size: 32px;
+    line-height: 130%;
+    margin-bottom: 22px;
+    @media (max-width: $md) {
+      font-size: 26px;
+    }
+    @media (max-width: $sm) {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__full-desc {
+    font-size: 16px;
+    line-height: 160%;
+    columns: 2;
+    max-width: 370px;
+    @media (max-width: $md) {
+      font-size: 14px;
+    }
+    @media (max-width: $sm) {
+      max-width: none;
+      font-size: 12px;
+      line-height: 145%;
+      columns: auto;
+      p {
+        &:first-child {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  &__bottom-block {
+    top: 70px;
+    margin-top: -70px;
+    padding: 139px 0;
+    z-index: 1;
+    @media (max-width: $sm) {
+      padding: 92px 0;
+      top: 25px;
+      margin-top: -25px;
+    }
+
+    video {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      border-radius: 50px 50px 0 0;
+      @media (max-width: $sm) {
+        border-radius: 30px 30px 0 0;
+      }
+    }
+  }
+
+  &__bottom-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    border-radius: 50px 50px 0 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    z-index: 1;
+    @media (max-width: $sm) {
+      border-radius: 30px 30px 0 0;
+    }
+  }
+
+  &__bottom-text-block {
+    max-width: 60%;
+  }
+
+  &__bottom-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: $ff_title;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 32px;
+    line-height: 130%;
+    color: #FFFFFF;
+    max-width: 684px;
+    z-index: 2;
+    @media (max-width: $sm) {
+      font-size: 20px;
+      max-width: none;
+      width: 100%;
+      padding: 0 6px;
+    }
+  }
+
+}

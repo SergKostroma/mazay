@@ -1,0 +1,119 @@
+@mixin b_64($val) {
+  background-image: url($val);
+}
+
+@mixin base_64($val) {
+  background-image: url('data:image/png;base64,' + $val);
+}
+
+@mixin base_64_important($val) {
+  background-image: url('data:image/png;base64,' + $val) !important;
+}
+
+@mixin pl_color($color) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &::-moz-placeholder {
+    color: $color;
+  }
+}
+
+@mixin bg_img($repeat, $position, $size) {
+  background-repeat: $repeat;
+  background-position: $position;
+  background-size: $size;
+}
+/*position*/
+/// Shorthand mixin for offset positioning
+/// @param {String} $position - Either `relative`, `absolute` or `fixed`
+/// @param {Length} $top [null] - Top offset
+/// @param {Length} $right [null] - Right offset
+/// @param {Length} $bottom [null] - Bottom offset
+/// @param {Length} $left [null] - Left offset
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+/// Shorthand mixin for absolute positioning
+/// Serves as an alias for `position(absolute, ...)`
+/// @param {Arglist} $args - Offsets
+/// @require {mixin} position
+@mixin absolute($args...) {
+  @include position(absolute, $args...);
+}
+
+/// Shorthand mixin for relative positioning
+/// Serves as an alias for `position(relative, ...)`
+/// @param {Arglist} $args - Offsets
+/// @require {mixin} position
+@mixin relative($args...) {
+  @include position(relative, $args...);
+}
+
+/// Shorthand mixin for fixed positioning
+/// Serves as an alias for `position(fixed, ...)`
+/// @param {Arglist} $args - Offsets
+/// @require {mixin} position
+@mixin fixed($args...) {
+  @include position(fixed, $args...);
+}
+
+@mixin static($args...) {
+  @include position(static, $args...);
+}
+
+
+
+@mixin bg_button($bg-wrap, $transition, $z-index, $bg-after, $transition-after, $style, $hover-after-value){
+  background-color:$bg-wrap;
+  transition:$transition;
+  &:after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0;
+    z-index: $z-index;
+    background-color: $bg-after;
+    transition: $transition-after $style;
+
+  }
+
+  &:hover{
+    &:after{
+      #{$transition-after}: $hover-after-value;
+    }
+  }
+
+}
+
+/*flex-box*/
+@mixin display($flex, $align, $justify) {
+  display: $flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin flex($args...) {
+  @include display(flex, $args...);
+}
+
+@mixin display($inline-flex, $align, $justify) {
+  display: $inline-flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin inline-flex($args...) {
+  @include display(inline-flex, $args...);
+}
+/*flex-box*/
+

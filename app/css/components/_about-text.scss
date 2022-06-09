@@ -1,0 +1,116 @@
+.about-text {
+  padding: 60px 0 100px;
+
+  @media (max-width: $mob) {
+    padding: 40px 0 70px;
+  }
+
+  &--long-padding {
+    padding: 100px 0;
+    @media (max-width: $mob) {
+      padding: 70px 0;
+    }
+  }
+
+  &__background {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 97%;
+  }
+
+  &__content {
+    font-family: $ff_title;
+    font-size: 90px;
+    line-height: 100%;
+    text-align: center;
+    background-color: #FFFFFF;
+    mix-blend-mode: lighten;
+    max-width: 98%;
+    margin: -1px auto;
+    @media (max-width: $md) {
+      font-size: 75px;
+    }
+    @media (max-width: $sm) {
+      font-size: 70px;
+    }
+    @media (max-width: $mob) {
+      font-size: 30px;
+    }
+  }
+
+  &__hares {
+    svg {
+      display: block;
+      margin: 0 auto 33px;
+      fill: #BEAC83;
+      stroke: #fff;
+      height: 48px;
+      @media (max-width: $mob) {
+        height: 28px;
+        margin: 0 auto 15px;
+      }
+    }
+  }
+
+  &__hares-with-tree {
+    svg {
+      fill: $main;
+      display: block;
+      margin: 0 auto 13px;
+      height: 105px;
+      width: 446px;
+      @media (max-width: $mob) {
+        height: 79px;
+        width: auto;
+      }
+    }
+  }
+
+  &__container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__button-container {
+    text-align: center;
+    margin: 36px 0 60px;
+    @media (max-width: $mob) {
+      margin: 25px 0 40px;
+    }
+  }
+
+  &__images {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: $sm) {
+      overflow-x: scroll;
+      width: calc(100% + 10px);
+      margin-right: -10px;
+    }
+  }
+
+  &__button {
+    padding: 16px 30px;
+    font-size: 16px;
+    @media (max-width: $mob) {
+      padding: 12px 42px;
+      font-size: 13px;
+    }
+  }
+
+  &__img {
+    width: calc(25% - 17px);
+    @media (max-width: $sm) {
+      min-width: 194px;
+      height: 194px;
+      margin-right: 10px;
+    }
+  }
+}

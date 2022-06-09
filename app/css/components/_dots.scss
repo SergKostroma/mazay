@@ -1,0 +1,26 @@
+.dots {
+  position: relative;
+
+  &:after, &:before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    background-color: $main;
+    top: 0;
+    z-index: 1;
+    @media (max-width: $mob) {
+      width: 2px;
+      height: 2px;
+    }
+  }
+
+  &:after {
+    left: 0;
+  }
+
+  &:before {
+    right: 0;
+  }
+}

@@ -1,0 +1,332 @@
+.restaurants {
+  margin-top: 170px;
+  margin-bottom: 100px;
+  @media (max-width: $mob) {
+    margin-top: 91px;
+    margin-bottom: 60px;
+  }
+
+  &__main-title {
+    margin-bottom: 15px;
+    @media (max-width: $mob) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__main-desc {
+    font-size: 19px;
+    line-height: 160%;
+    color: $dark;
+    text-align: center;
+    margin: 0 auto 46px;
+    max-width: 737px;
+    @media (max-width: $md) {
+      font-size: 17px;
+    }
+    @media (max-width: $mob) {
+      font-size: 14px;
+      margin: 0 auto 30px;
+      max-width: 90%;
+    }
+  }
+  &__left {
+    @media (max-width: $mob) {
+      width: 100%;
+    }
+  }
+
+  &__top-svg {
+    margin-bottom: 20px;
+    text-align: center;
+
+    svg {
+      width: 92px;
+      height: 22px;
+      fill: $main;
+    }
+
+    @media (max-width: $mob) {
+      margin: 0 auto 6px;
+      svg {
+        width: 60px;
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgb(210, 197, 168);
+
+    &:nth-child(1) {
+      &.active {
+        .restaurants {
+          &__bg {
+            border-radius: 50px 50px 0 0;
+            @media (max-width: $mob) {
+              border-radius: 30px 30px 0 0;
+            }
+          }
+        }
+      }
+    }
+
+    &.active {
+      border-bottom: none;
+
+      .restaurants {
+
+        &__bottom {
+          cursor: auto;
+          background: rgba(190, 172, 131, 0.6);
+          backdrop-filter: blur(10px);
+          margin-top: -113px;
+          padding: 0 22px 0 28px;
+          @media (max-width: $mob) {
+            margin-top: -120px;
+            flex-wrap: wrap;
+            padding: 10px 22px 0 14px;
+          }
+        }
+
+        &__title {
+          font-size: 52px;
+          @media (max-width: $md) {
+            font-size: 42px;
+          }
+          @media (max-width: $sm) {
+            font-size: 26px;
+          }
+          @media (max-width: $mob) {
+            font-size: 16px;
+          }
+        }
+
+        &__button {
+          display: block;
+          @media (max-width: $mob) {
+            font-size: 13px;
+            margin-bottom: 10px;
+            padding: 13px 30px;
+          }
+        }
+
+        &__desc {
+          font-size: 19px;
+          margin-bottom: 16px;
+          @media (max-width: $mob) {
+            font-size: 17px;
+          }
+          @media (max-width: $mob) {
+            font-size: 11px;
+            margin-bottom: 15px;
+          }
+        }
+
+        &__arrow {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__bg {
+    display: none;
+    padding-bottom: 44.734%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @media (max-width: $sm) {
+      padding-bottom: 60%;
+    }
+    @media (max-width: $mob) {
+      padding-bottom: 94.67%;
+    }
+  }
+
+  &__bottom {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px 0 28px;
+    color: $white;
+    background-color: $main;
+    transition: .5s;
+    @media (max-width: $mob) {
+      padding: 0 10px 0 14px;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 130%;
+    transition: .5s;
+    @media (max-width: $mob) {
+      font-size: 18px;
+    }
+    @media (max-width: $mob) {
+      font-size: 16px;
+    }
+  }
+
+  &__desc {
+    font-size: 14px;
+    line-height: 160%;
+    transition: .5s;
+    @media (max-width: $mob) {
+      font-size: 12px;
+    }
+    @media (max-width: $mob) {
+      font-size: 11px;
+    }
+  }
+
+  &__button {
+    color: $main;
+    background-color: $white;
+    display: none;
+    padding: 14px 25px;
+    &:focus {
+      background-color: $white;
+    }
+  }
+
+  &__arrow {
+    margin: 12px 0;
+    height: 56px;
+    width: 56px;
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-image: url(/app/img/svg/arrow-down.svg);
+    @media (max-width: $mob) {
+      margin: 10px 0;
+      height: 44px;
+      width: 44px;
+    }
+  }
+
+  &__chef-tag {
+    font-family: $ff_title;
+    font-size: 22px;
+    line-height: 100%;
+    margin-bottom: 30px;
+    color: $main;
+    @media (max-width: $mob) {
+      font-size: 14px;
+      margin-bottom: 20px;
+      line-height: 130%;
+    }
+  }
+
+  &__chef-title {
+    font-family: $ff_title;
+    font-size: 32px;
+    line-height: 130%;
+    color: $dark;
+    @media (max-width: $mob) {
+      font-size: 18px;
+    }
+  }
+
+  &__chef-title-tag {
+    font-size: 14px;
+    line-height: 160%;
+    color: $main;
+    margin-bottom: 23px;
+    @media (max-width: $mob) {
+      font-size: 11px;
+      margin-bottom: 12px;
+    }
+  }
+
+  &__chef-desc {
+    font-size: 19px;
+    line-height: 160%;
+    color: $dark;
+    @media (max-width: $md) {
+      font-size: 17px;
+    }
+    @media (max-width: $mob) {
+      font-size: 14px;
+    }
+  }
+
+  &__chef-left {
+    @media (max-width: $mob) {
+      order: 1;
+      text-align: center;
+    }
+  }
+
+  &__right {
+    position: relative;
+    margin-left: 59px;
+    width: 162px;
+    display: flex;
+    justify-content: flex-end;
+    @media (max-width: $mob) {
+      margin-left: 0;
+      width: auto;
+    }
+  }
+
+  &__chef-right {
+    position: relative;
+    margin: 23px 32px 0 59px;
+    width: 162px;
+    @media (max-width: $mob) {
+      margin: 60px auto 25px;
+      width: auto;
+    }
+  }
+
+  &__chef {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 739px;
+    margin: 54px auto 128px;
+    @media (max-width: $mob) {
+      flex-wrap: wrap;
+      margin: 29px auto 65px;
+    }
+  }
+
+  &__chef-svg {
+    left: -35px;
+    top: -40px;
+    position: absolute;
+
+    svg {
+      width: 267px;
+      height: 262px;
+      fill: $main;
+    }
+
+    @media (max-width: $mob) {
+      left: -27px;
+      top: -27px;
+      svg {
+        width: 209px;
+        height: 206px;
+      }
+    }
+  }
+
+  &__img {
+    position: relative;
+    z-index: 1;
+    width: 208px;
+    height: 208px;
+    border-radius: 100%;
+    @media (max-width: $mob) {
+      width: 168px;
+      height: 168px;
+      flex-wrap: wrap;
+    }
+  }
+}

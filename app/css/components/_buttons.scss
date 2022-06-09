@@ -1,0 +1,50 @@
+.btn {
+  padding: 15px 30px;
+  border: 1px solid $main;
+  border-radius: 50px;
+  color: $main;
+  font-size: 13px;
+  line-height: 120%;
+  display: inline-block;
+  transition: .5s;
+  @media (min-width: $hovers) {
+    &:hover {
+      color: $hover;
+      border: 1px solid $hover;
+    }
+
+    &:focus {
+      background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 0.01%, rgba(190, 172, 131, 0.13) 100%);
+    }
+  }
+
+  &.disabled {
+    color: $gold-black;
+    border: 1px solid $gold-black;
+  }
+}
+
+.btn-with-bg {
+  padding: 15px 30px;
+  border-radius: 50px;
+  color: $dark;
+  font-size: 13px;
+  line-height: 120%;
+  display: inline-block;
+  transition: .5s;
+  background-color: $main;
+
+  &:hover {
+    color: $text-dark;
+    background-color: $hover;
+  }
+
+  &:focus {
+    background: linear-gradient(180deg, $hover 0%, $main 100%);
+  }
+
+  &.disabled {
+    color: $gold-black;
+    background-color: $placeholder;
+  }
+}

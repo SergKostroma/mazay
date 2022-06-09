@@ -1,0 +1,73 @@
+
+.poster{
+    background-color:rgba(190, 172, 131, 0.2);
+    &__top{
+        padding-top: 72px;
+        max-width:60px;
+        margin:0 auto;
+    }
+    &__events{
+        margin: 46px auto ;
+        display:flex;
+        flex-wrap:wrap;
+        gap:24px;
+       }
+    &__event{
+        display: flex;
+        width:calc(50% - 12px);
+        margin-bottom: 22px; 
+    }
+    &__event-text-content{
+        display:flex;
+        flex-direction:column;
+        max-width:381px;
+        width:100%;
+        background-color: #BEAC83;
+        padding:25px 33px 27px 25px;
+        color:#fff;
+    }
+
+    &__event-title{
+        font-size:32px;
+        margin-bottom: 12px;
+  }
+  &__event-description{
+    font-size:14px;
+}
+&__event-date{
+    font-size:32px;
+    font-family:Oranienbaum;
+  
+  
+  
+}
+&__event-footer{
+    display:flex;
+    margin-top:auto;
+    flex:1;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+&__event-forward-button{
+   width:26px;
+   height:26px;
+   background-color: hsla(0,0%,100%,.2);
+   background-image: url(/app/img/svg/arrow-next.svg);
+   background-size: 9px 16px;
+   border-radius: 100%;
+    background-repeat: no-repeat;
+    background-position: 55% 50%;
+
+}
+       
+}
+
+
+
+
+
+
+
+
+
+

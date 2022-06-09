@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'Oranienbaum';
+  src: url(/app/fonts/oranienbaum-regular-webfont.woff2) format("woff2"),
+  url(/app/fonts/oranienbaum-regular-webfont.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url(/app/fonts/inter-regular-webfont.woff2) format("woff2"),
+  url(/app/fonts/inter-regular-webfont.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap
+}
+
+@font-face {
+  font-family: 'Ruble';
+  src: url(/app/fonts/ruble.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap
+}

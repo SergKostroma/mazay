@@ -1,0 +1,60 @@
+<?
+$aMenuLinks = Array(
+    Array(
+        "Отель",
+        "#main",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
+        "Чем заняться",
+        "#about",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
+        "Ресторан",
+        "#restaurants",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
+        "Проведение мероприятий",
+        "#events",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
+        "Афиша",
+        "#afisha",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
+        "Проживание",
+        "#residence",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
+        "Детский парк",
+        "#children-park",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
+        "Контакты",
+        "#contacts",
+        Array(),
+        Array(),
+        ""
+    )
+);
+?>

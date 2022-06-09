@@ -1,0 +1,49 @@
+.link {
+  position: relative;
+  font-size: 16px;
+  line-height: 160%;
+  color: $brown;
+  transition: .5s;
+
+  &:after {
+    content: '';
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    right: -15px;
+    width: 8px;
+    height: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(/app/img/svg/arrow.svg);
+  }
+
+  @media (min-width: $hovers) {
+    &:hover {
+      color: $main;
+      &:after {
+        background-image: url(/app/img/svg/arrow-hover.svg);
+      }
+    }
+    &:focus {
+      color: $gold-black;
+      &:after {
+        background-image: url(/app/img/svg/arrow-focus.svg);
+      }
+    }
+  }
+
+  @media (max-width: $md) {
+    font-size: 14px;
+  }
+
+  @media (max-width: $mob) {
+    font-size: 12px;
+    &:after {
+      width: 8px;
+      height: 11px;
+      right: -12px;
+    }
+  }
+}

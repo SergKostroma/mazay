@@ -1,0 +1,52 @@
+.success-pay {
+  padding: 100px 0;
+  text-align: center;
+  @media(max-width: $sm) {
+    padding: 50px 0;
+  }
+
+  &__title {
+    font-family: $ff_title;
+    font-size: 46px;
+    line-height: 110%;
+    margin-bottom: 11px;
+    @media(max-width: $sm) {
+      font-size: 24px;
+      margin-bottom: 6px;
+    }
+  }
+
+  &__order-number {
+    font-size: 19px;
+    line-height: 160%;
+    margin-bottom: 30px;
+    @media(max-width: $sm) {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__desc {
+    font-size: 19px;
+    line-height: 160%;
+    max-width: 738px;
+    margin: 0 auto 70px;
+    @media(max-width: $sm) {
+      font-size: 14px;
+      margin: 0 auto 30px;
+    }
+  }
+
+  &__top-svg {
+    svg {
+      width: 125px;
+    }
+  }
+
+  &__bottom-svg {
+
+    svg {
+      width: 230px;
+    }
+  }
+}

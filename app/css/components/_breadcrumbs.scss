@@ -1,0 +1,130 @@
+.breadcrumbs {
+  &__steps {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 40px;
+    @media (max-width: $sm) {
+      overflow-x: scroll;
+      width: calc(100% + 20px);
+      margin-left: -10px;
+    }
+  }
+
+  &__back {
+    margin-top: 23px;
+    margin-bottom: 17px;
+    font-size: 14px;
+    line-height: 160%;
+    color: $main;
+    display: flex;
+    align-items: center;
+
+    &:before {
+      content: url(/app/img/svg/back.svg);
+      margin-right: 10px;
+    }
+  }
+
+  &__step {
+    width: 100%;
+    text-align: center;
+    list-style-type: none;
+    font-size: 14px;
+    line-height: 160%;
+    color: $placeholder;
+    padding: 9px 0;
+    @media (max-width: $sm) {
+      font-size: 11px;
+      padding: 9px 25px;
+      white-space: nowrap;
+    }
+
+    &.active {
+      color: $dark;
+    }
+
+    &.complete {
+      color: $brown;
+
+      span {
+        position: relative;
+
+        &:before {
+          content: '' !important;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: -21px;
+          background-image: url(/app/img/svg/step-complete.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+          width: 15px;
+          height: 12px;
+          z-index: 1;
+        }
+      }
+    }
+
+    &:nth-child(1) {
+      position: relative;
+      background: #EDE8DE;
+
+      span {
+        &:before {
+          content: '1. ';
+        }
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 100%;
+        background-image: url(/app/img/svg/step-1.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: 20px;
+        height: 40px;
+        z-index: 1;
+      }
+    }
+
+    &:nth-child(2) {
+      background: #F2EFE8;
+      position: relative;
+
+      span {
+        &:before {
+          content: '2. ';
+        }
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 100%;
+        background-image: url(/app/img/svg/step-2.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: 20px;
+        height: 40px;
+      }
+    }
+
+    &:nth-child(3) {
+      span {
+        &:before {
+          content: '3. ';
+        }
+      }
+
+      background: #F8F7F3;
+    }
+  }
+}

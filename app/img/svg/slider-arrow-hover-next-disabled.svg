@@ -1,0 +1,7 @@
+<svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle opacity="0.5" r="30.5" transform="matrix(-1 0 0 1 31 31)" stroke="white"/>
+    <g opacity="0.5">
+        <path d="M37.9844 24C39.9758 27.7813 41.5383 29.0156 44.9758 31C41.4758 33.0156 40.0071 34.2969 37.9844 38.0312" stroke="white" stroke-linecap="square" stroke-linejoin="bevel"/>
+        <path d="M16.9688 30.0312C16.9689 30.5312 16.9688 32.0312 16.9688 32.0312C22.9689 31.5312 44.4687 31.5313 44.4687 31.5313V30.5313C44.4687 30.5313 22.9689 30.5312 16.9688 30.0312Z" fill="white"/>
+    </g>
+</svg>
